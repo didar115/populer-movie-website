@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<title>The mealDB</title>
+	</head>
+	<body> 
+		<nav>
+			<div class="container-fluid p-0 ">
+				<nav class="navbar navbar-expand-lg navbar-light bg-color py-3">
+  <div class="container">
+	  <div class="container">
+		  <a class="navbar-brand" href="#">
+			  <a class="navbar-brand d-flex align-items-center px-5" href="#">
+			  <img src="image/101.svg" class="img-fluid" style="height: 20px;" alt="">
+		  </a>
+			</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      
+    </div>
+		 
+		  <!-- <a class="navbar-brand d-flex align-items-center px-5" href="#">
+			  <img src="image/101.svg" class="img-fluid" style="height: 20px;" alt="">
+		  </a> -->
+		  
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+	  </div>
+    
+  </div>
+</nav>
+				
+
+			</div>
+		</nav>
+
+
+
+		<!-- search bar  -->
+		<div class="d-flex justify-content-center mt-5">
+			<div class="input-group mb-3 w-50">
+				<input
+					type="text"
+					id="search-field"
+					class="form-control"
+					placeholder="Search by meal name..."
+					aria-label="Recipient's username"
+					aria-describedby="button-addon2"
+				/>
+				<button
+					id="search-button"
+					class="btn btn-danger"
+					type="button"
+					id="button-addon2"
+				>
+					Search
+				</button>
+			</div>
+		</div>
+
+		<!-- card body section  -->
+
+		<div class="container">
+			<div id="details-info" class="d-flex justify-content-center mb-5"></div>
+			<div class="row g-4" id="parent-div"></div>
+		</div>
+		<!-- end card body section  -->
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel"></h5>
+						<button
+							type="button"
+							class="btn-close"
+							onclick="clearData()"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body" id="modal-img"></div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							onclick="clearData()"
+							class="btn btn-primary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end modal  -->
+
+		<!-- search null warning  -->
+		<div class="conatainer d-flex justify-content-center d-none" id="warning">
+			<div class="text-center p-3 bg-danger w-50">
+				search your desire food...
+			</div>
+		</div>
+		<!-- end  -->
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
